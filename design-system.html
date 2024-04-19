@@ -150,7 +150,7 @@
             </ul>
           </nav>
         </div>
-        <div class="flex" style="justify-content: space-around;">
+        <div class="flex" style="justify-content: space-around">
           <div style="margin-top: 5rem">
             <!-- explore button  -->
             <a
@@ -159,87 +159,85 @@
               >Explore</a
             >
           </div>
-          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem;">
+          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
             <!-- Tabs  -->
-            <div class="tab-list underline-indicators flex">
+
+            <div
+              class="tab-list underline-indicators flex"
+              role="tablist"
+              aria-label="destination"
+            >
               <button
                 aria-selected="true"
-                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+                role="tab"
+                aria-controls="moon-tab"
+                tabindex="0"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2"
               >
                 Moon
               </button>
               <button
                 aria-selected="false"
-                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+                role="tab"
+                aria-controls="mars-tab"
+                tabindex="-1"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2"
               >
                 Mars
               </button>
               <button
                 aria-selected="false"
-                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
+                role="tab"
+                aria-controls="europa-tab"
+                tabindex="-1"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2"
               >
                 Europa
+              </button>
+              <button
+                aria-selected="false"
+                role="tab"
+                aria-controls="titan-tab"
+                tabindex="-1"
+                class="uppercase ff-sans-cond text-accent letter-spacing-2"
+              >
+                Titan
               </button>
             </div>
             <!-- Dots  -->
             <div class="dot-indicators flex">
-              <button
-              aria-selected="true" 
-              >
-              <span class="sr-only">
-
-                Slide title
-              </span>
+              <button aria-selected="true">
+                <span class="sr-only"> Slide title </span>
               </button>
-              <button
-                aria-selected="false"
-              >
-              <span class="sr-only">
-
-                Slide title
-              </span>
-                
+              <button aria-selected="false">
+                <span class="sr-only"> Slide title </span>
               </button>
-              <button
-                aria-selected="false"
-              >
-              <span class="sr-only">
-
-                Slide title
-              </span>
-                
+              <button aria-selected="false">
+                <span class="sr-only"> Slide title </span>
               </button>
             </div>
             <!-- Numbers  -->
-            <div class="numbered-indicators flow " style="margin-top : 4rem; --flow-space : 1rem" >
+            <div
+              class="numbered-indicators flow"
+              style="margin-top: 4rem; --flow-space: 1rem"
+            >
               <button
-              aria-selected="true"
-              class="ff-serif fs-500 bg-dark text-white " 
+                aria-selected="true"
+                class="ff-serif fs-500 bg-dark text-white"
               >
-              <span class="">
-
-                1
-              </span>
+                <span class=""> 1 </span>
               </button>
               <button
                 aria-selected="false"
-                class="ff-serif fs-500 bg-dark text-white "
+                class="ff-serif fs-500 bg-dark text-white"
               >
-              <span class="">
-
-                2
-              </span>
-                
+                <span class=""> 2 </span>
               </button>
               <button
                 aria-selected="false"
-                class="ff-serif fs-500 bg-dark text-white "
+                class="ff-serif fs-500 bg-dark text-white"
               >
-              <span class="">
-
-                3
-              </span>
-                
+                <span class=""> 3 </span>
               </button>
             </div>
           </div>
