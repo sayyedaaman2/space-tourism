@@ -476,7 +476,9 @@ select {
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
 }
-
+.numbered-indicators{
+  display: grid;
+}
 .numbered-indicators > * {
   cursor: pointer;
   aspect-ratio: 1;
@@ -564,6 +566,27 @@ body {
   }
 }
 
+
+/* technology  */
+
+
+.technology {
+  background-image: url("./assets/technology/background-technology-mobile.jpg");
+}
+
+@media (min-width: 35em) {
+  .technology {
+    background-position: center center;
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media (min-width: 45em) {
+  .technology {
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+  }
+}
+
 /* ----------------------------- */
 /*  Layout                       */
 /* ----------------------------- */
@@ -582,6 +605,9 @@ body {
 }
 .numbered-title {
   grid-area: title;
+}
+.numbered-indicators {
+  grid-area: tabs;
 }
 /* destination layout */
 
@@ -643,6 +669,40 @@ body {
 .crew-details h2 {
   color : hsl(var(--clr-white) / .5);
 }
+
+
+/* technology layout  */
+
+
+.grid-container--technology {
+  --flow-space: 1rem;
+  --gap : 1rem;
+  padding-inline: 0;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+.grid-container--technology > picture {
+  grid-area: image;
+}
+.grid-container--technology > .numbered-indicators {
+  grid-area: tabs;
+}
+.grid-container--technology > .technology-details {
+  grid-area: content;
+}
+
+.grid-container--technology .numbered-indicators {
+  /* outline: 1px solid green; */
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: 1fr;
+  --flow-space : 0;
+}
+
+
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -661,7 +721,19 @@ body {
       "image"
       ;
   }
+  .grid-container--technology {
+    --flow-space: 3rem;
+    --gap : 1rem;
+    padding-inline: 2rem;
+    
+  }
+
+  .grid-container--technology .numbered-indicators { 
+    margin-top: 2rem;
+  }
 }
+
+
 @media (min-width: 45em) {
   .grid-container {
     text-align: left;
@@ -719,6 +791,28 @@ body {
     max-width: 100%;
   }
 
+
+
+.grid-container--technology {
+  grid-template-columns: minmax(1rem, 1fr) minmax(0,5rem) minmax(0,35rem) minmax(0, 65rem);
+  --flow-space: 1rem;
+  --gap : 1rem;
+  grid-template-areas:
+  ". title title ."
+  ". tabs content image "
+  ". tabs content  image"
+  ". tabs content  image"
+    ;
+}
+
+.grid-container--technology > picture {
+  align-self: center;
+  max-width: 100%;
+}
+.grid-container--technology .numbered-indicators {
+  display: block;
+  --flow-space : 1rem;
+}
 }
 
 
